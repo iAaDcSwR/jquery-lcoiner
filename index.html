@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LCOiNER</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="w3toggle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch:700">
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>LCOiNER&trade;</h1>
+            <div>Live Coin & Cryptocurrency Information.</div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="active" data-section="#home">Home</li>
+            <li data-section="#liveReports">Live Reports</li>
+            <li data-section="#about">About</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">Loading...</section>
+        <section id="liveReports" class="d-none">
+            <div id="chartContainer">Loading...</div>
+        </section>
+        <section id="about" class="row d-none">
+            <div class="d-inline-block col-md-5">
+                <div class="text-center"><img class="mx-auto rounded-circle" src="me.png" id="me" alt="Me"></div>
+                <div>
+                    <h3 class="mt-0 d-inline">iAaDcSwR, </h3>
+                    <p></p>
+                    <p>Studies Full Stack Web Development @ John Bryce Training</p>
+                    <p>Khoma u-Migdal St 29, Tel Aviv-Yafo, 6777129, Israel</p>
+                </div>
+            </div>
+            <div class="d-inline-block col-md-5">
+                <div class="d-flex flex-column justify-content-center">
+                    <h3 class="mt-0 d-inline">LCOiNER&trade;</h3>
+                    is a Cryptocurrency comparison tool
+                    which utilizes HTML5, CSS3, ECMAScript2016
+                    Javascript and AJAX in order to provide
+                    you with up-to-date information about
+                    digital coins from all over the world.
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Button trigger modal -->
+    <button id="modalTrigger" type="button" class="btn btn-primary d-none" data-toggle="modal" data-target="#exampleModal"></button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loadingModalLabel">Loading, please wait...</h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                            <!-- Place n% here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="moreInfoModal" tabindex="-1" role="dialog" aria-labelledby="moreInfoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="moreInfoModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="media">
+                        <img class="align-self-center mr-3">
+                        <div class="media-body"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="tooManyCoinsModal" tabindex="-1" role="dialog" aria-labelledby="tooManyCoinsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tooManyCoinsModalLabel">Too many coins</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>You chose too many Cryptocurrencies in the 'Home' section. Only 5 are allowed.</p>
+                    <!-- <p>Choose 1 coin to exclude from comparison:</p>
+                    <div class="btn-group" role="group" aria-label="Coins to exclude">
+                        <button type="button" class="btn btn-secondary">Left</button>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
